@@ -95,3 +95,4 @@ tzdata==2025.3
 urllib3==2.6.3
 wcwidth==0.6.0
 Werkzeug==3.1.6
+gunicorn
