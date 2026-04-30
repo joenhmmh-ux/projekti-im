@@ -4,7 +4,11 @@ from flask import Flask, render_template, request
 
 base_dir = Path(__file__).resolve().parent.parent
 # ... / Model-Fjale-Mire-Keq / ...
-app = Flask(__name__, template_folder = base_dir / "Web")
+app = Flask(__name__, 
+    template_folder=base_dir / "Web",
+    static_folder=base_dir / "Web",
+    static_url_path="/static"
+)
 
 ALBANIAN_DATASET = base_dir / "Data" / "train_data_sq.csv"
 ENGLISH_DATASET = base_dir / "Data" / "train_data_en.csv"
